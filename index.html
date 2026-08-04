@@ -108,17 +108,26 @@ body{
 }
 
 /* ===== HEADER ===== */
-.scr-pad{padding:calc(20px + env(safe-area-inset-top)) 20px 0;}
-.scr-content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 16px 16px;}
+.scr-pad{padding:calc(24px + env(safe-area-inset-top)) 22px 0;}
+.scr-content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:8px 20px 24px;}
 .scr-title{font-family:'Songti SC','SimSun',serif;font-size:20px;font-weight:500;letter-spacing:3px;color:var(--t1);}
 .scr-sub{font-size:13px;color:var(--t2);margin-top:4px;letter-spacing:1px;margin-bottom:24px;}
+.scr-head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.manage-btn{
+  width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:rgba(255,255,255,.035);
+  border:1px solid var(--border);color:var(--t2);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s,border-color .2s,transform .2s;
+}
+.manage-btn:active{transform:scale(.96);background:var(--surface-hi);border-color:var(--border-hi);}
+.manage-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;}
 
 /* ===== AWARENESS ===== */
-.emo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;}
+.emo-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:28px;}
 .emo-chip{
-  padding:14px 10px;border-radius:14px;background-color:var(--surface);background-image:var(--noise);
+  padding:15px 10px;border-radius:16px;background-color:var(--surface);background-image:var(--noise);
   border:1px solid var(--border);
-  text-align:center;cursor:pointer;transition:all .2s;font-size:14px;color:var(--t2);letter-spacing:2px;user-select:none;
+  box-shadow:0 8px 24px rgba(5,9,25,.08);text-align:center;cursor:pointer;
+  transition:transform .18s,background-color .2s,border-color .2s;font-size:14px;color:var(--t2);letter-spacing:2px;user-select:none;
 }
 .emo-chip:active{transform:scale(.96);}
 .emo-chip.sel-light{background-color:rgba(217,184,122,.12);border-color:rgba(217,184,122,.35);color:var(--gold);}
@@ -132,7 +141,7 @@ body{
 .thought-area:focus{outline:none;border-color:var(--border-hi);}
 
 /* ===== BODY ===== */
-.body-dim{margin-bottom:20px;}
+.body-dim{margin-bottom:13px;padding:15px 16px;border-radius:17px;background:rgba(27,35,64,.28);border:1px solid var(--border);box-shadow:0 8px 24px rgba(5,9,25,.06);}
 .body-dim-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
 .body-dim-label{font-size:14px;color:var(--t1);letter-spacing:1px;}
 .body-dim-val{font-size:12px;color:var(--t2);}
@@ -145,19 +154,47 @@ body{
 .body-dot.on-light{background:rgba(107,143,113,.2);border-color:var(--green-light);}
 .body-dot.on-dark{background:rgba(217,130,43,.15);border-color:var(--coral);}
 .body-sug{
-  padding:16px;border-radius:14px;background:rgba(217,130,43,.06);border:1px solid rgba(217,130,43,.12);
-  font-size:13px;color:var(--coral);letter-spacing:1px;margin-bottom:20px;min-height:48px;
+  padding:17px;border-radius:16px;background:rgba(217,130,43,.055);border:1px solid rgba(217,130,43,.12);
+  font-size:13px;color:var(--coral);letter-spacing:1px;margin:7px 0 22px;min-height:52px;
   display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.6;
 }
 
 /* ===== SAVE BTN ===== */
 .save-btn{
-  width:100%;padding:16px;border-radius:14px;border:none;font-size:15px;letter-spacing:3px;
+  width:100%;padding:16px;border-radius:16px;border:none;font-size:15px;letter-spacing:3px;
   cursor:pointer;transition:all .25s;font-family:inherit;
-  background:rgba(217,184,122,.15);color:var(--gold);border:1px solid rgba(217,184,122,.25);
+  background:linear-gradient(180deg,rgba(217,184,122,.2),rgba(217,184,122,.12));color:var(--gold);
+  border:1px solid rgba(217,184,122,.28);box-shadow:0 10px 28px rgba(5,9,25,.12);
 }
 .save-btn:active{transform:scale(.98);}
 .save-btn:disabled{background:var(--surface);color:var(--t3);border-color:var(--border);cursor:default;}
+
+/* ===== EDITABLE CONFIG ===== */
+.config-modal-bg{position:fixed;inset:0;z-index:210;display:none;align-items:flex-end;justify-content:center;background:rgba(7,10,25,.72);backdrop-filter:blur(8px);}
+.config-modal-bg.show{display:flex;animation:fadeIn .2s;}
+.config-sheet{width:100%;max-width:480px;max-height:88vh;max-height:88dvh;overflow:hidden;display:flex;flex-direction:column;background:#151c35;border:1px solid var(--border-hi);border-radius:26px 26px 0 0;box-shadow:0 -24px 70px rgba(0,0,0,.28);}
+.config-head{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 14px;}
+.config-head h3{font-family:'Songti SC',serif;font-size:19px;font-weight:500;letter-spacing:3px;}
+.icon-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--t2);cursor:pointer;font-size:18px;}
+.config-list{overflow-y:auto;padding:4px 18px 20px;}
+.config-list::-webkit-scrollbar{width:0;}
+.config-item{display:flex;align-items:center;gap:12px;padding:13px 14px;margin-bottom:9px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid var(--border);}
+.config-dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px;background:var(--gold);box-shadow:0 0 10px rgba(217,184,122,.35);}
+.config-dot.dark{background:var(--purple);box-shadow:0 0 10px rgba(169,159,222,.35);}
+.config-info{min-width:0;flex:1;}
+.config-name{font-size:14px;color:var(--t1);letter-spacing:1px;}
+.config-meta{font-size:11px;color:var(--t3);margin-top:2px;}
+.config-actions{display:flex;gap:5px;}
+.mini-btn{padding:7px 9px;border-radius:9px;border:0;background:transparent;color:var(--t3);font-family:inherit;font-size:12px;cursor:pointer;}
+.mini-btn:active{background:var(--surface);color:var(--t1);}
+.config-form{padding:16px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--border);background:rgba(14,19,38,.82);}
+.form-row{display:flex;gap:9px;}
+.form-input,.form-select{min-width:0;padding:12px 13px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--t1);font:13px inherit;outline:none;}
+.form-input{flex:1;}
+.form-select{width:92px;}
+.form-input:focus,.form-select:focus{border-color:var(--border-hi);}
+.form-add{padding:12px 16px;border-radius:12px;border:1px solid rgba(217,184,122,.26);background:rgba(217,184,122,.13);color:var(--gold);font:13px inherit;cursor:pointer;white-space:nowrap;}
+.form-hint{font-size:11px;color:var(--t3);margin-top:9px;line-height:1.6;}
 
 /* ===== STARS ===== */
 .star-screen{display:none;flex:1;overflow-y:auto;position:relative;z-index:1;-webkit-overflow-scrolling:touch;padding-bottom:calc(80px + env(safe-area-inset-bottom));}
@@ -340,8 +377,12 @@ body{
   <!-- ===== AWARENESS ===== -->
   <div class="screen" id="screen-awareness">
     <div class="scr-pad">
-      <h2 class="scr-title">此刻觉察</h2>
-      <p class="scr-sub">现在感觉怎么样？可以选多个</p>
+      <div class="scr-head-row">
+        <div><h2 class="scr-title">此刻觉察</h2><p class="scr-sub">现在感觉怎么样？可以选多个</p></div>
+        <button class="manage-btn" onclick="openConfig('emotion')" aria-label="管理情绪">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+        </button>
+      </div>
     </div>
     <div class="scr-content">
       <div class="emo-grid" id="emoGrid"></div>
@@ -353,8 +394,12 @@ body{
   <!-- ===== BODY ===== -->
   <div class="screen" id="screen-body">
     <div class="scr-pad">
-      <h2 class="scr-title">回到身体</h2>
-      <p class="scr-sub">感受一下，身体此刻在告诉你什么？</p>
+      <div class="scr-head-row">
+        <div><h2 class="scr-title">回到身体</h2><p class="scr-sub">感受一下，身体此刻在告诉你什么？</p></div>
+        <button class="manage-btn" onclick="openConfig('body')" aria-label="管理身体部位">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+        </button>
+      </div>
     </div>
     <div class="scr-content">
       <div id="bodyDims"></div>
@@ -426,6 +471,25 @@ body{
     <div class="modal-card" id="modalCard"></div>
   </div>
 
+  <!-- Editable emotion/body configuration. Stored separately from journal records. -->
+  <div class="config-modal-bg" id="configModalBg" onclick="if(event.target===this)closeConfig()">
+    <section class="config-sheet" role="dialog" aria-modal="true" aria-labelledby="configTitle">
+      <div class="config-head">
+        <h3 id="configTitle">管理</h3>
+        <button class="icon-btn" onclick="closeConfig()" aria-label="关闭">×</button>
+      </div>
+      <div class="config-list" id="configList"></div>
+      <form class="config-form" id="configForm" onsubmit="saveConfigItem(event)">
+        <div class="form-row">
+          <input class="form-input" id="configName" maxlength="12" autocomplete="off" placeholder="输入名称" required>
+          <select class="form-select" id="configOption"></select>
+          <button class="form-add" id="configSubmit" type="submit">新增</button>
+        </div>
+        <p class="form-hint" id="configHint"></p>
+      </form>
+    </section>
+  </div>
+
   <!-- ===== TOAST ===== -->
   <div class="toast" id="toast"></div>
 
@@ -451,18 +515,27 @@ body{
 
 <script>
 // ========== CONFIG ==========
-var EMOTIONS = [
-  {name:'平静',type:'light'},{name:'喜悦',type:'light'},{name:'放松',type:'light'},
-  {name:'感恩',type:'light'},{name:'期待',type:'light'},
-  {name:'焦虑',type:'dark'},{name:'委屈',type:'dark'},{name:'愤怒',type:'dark'},
-  {name:'悲伤',type:'dark'},{name:'恐惧',type:'dark'},{name:'疲惫',type:'dark'},{name:'迷茫',type:'dark'}
+// Unified editable definitions. Journal records continue to store names/keys,
+// so changing these lists never rewrites or removes existing user data.
+var DEFAULT_EMOTIONS = [
+  {id:'calm',name:'平静',type:'light'},{id:'joy',name:'喜悦',type:'light'},
+  {id:'relaxed',name:'放松',type:'light'},{id:'grateful',name:'感恩',type:'light'},
+  {id:'hopeful',name:'期待',type:'light'},{id:'excited',name:'激动',type:'light'},
+  {id:'exhilarated',name:'亢奋',type:'light'},{id:'anxious',name:'焦虑',type:'dark'},
+  {id:'wronged',name:'委屈',type:'dark'},{id:'angry',name:'愤怒',type:'dark'},
+  {id:'sad',name:'悲伤',type:'dark'},{id:'afraid',name:'恐惧',type:'dark'},
+  {id:'tired',name:'疲惫',type:'dark'},{id:'lost',name:'迷茫',type:'dark'},
+  {id:'guilty',name:'内疚',type:'dark'},{id:'ashamed',name:'羞耻',type:'dark'}
 ];
-var BODY_DIMS = [
-  {key:'breathing',label:'呼吸',levels:['急促','较浅','平稳','深长','自如']},
-  {key:'shoulders',label:'肩颈',levels:['紧绷','僵硬','一般','放松','舒展']},
-  {key:'chest',label:'胸口',levels:['压抑','发闷','一般','开阔','轻松']},
-  {key:'abdomen',label:'腹部',levels:['紧缩','不适','一般','温暖','放松']},
-  {key:'fatigue',label:'精力',levels:['极疲惫','很累','有些累','尚可','充沛']}
+var DEFAULT_BODY_DIMS = [
+  {id:'breathing',key:'breathing',label:'呼吸',levels:['急促','较浅','平稳','深长','自如'],need:'深呼吸'},
+  {id:'shoulders',key:'shoulders',label:'肩颈',levels:['紧绷','僵硬','一般','放松','舒展'],need:'活动肩颈'},
+  {id:'chest',key:'chest',label:'胸口',levels:['压抑','发闷','一般','开阔','轻松'],need:'扩胸'},
+  {id:'abdomen',key:'abdomen',label:'腹部',levels:['紧缩','不适','一般','温暖','放松'],need:'喝杯温水'},
+  {id:'fatigue',key:'fatigue',label:'精力',levels:['极疲惫','很累','有些累','尚可','充沛'],need:'休息一下'},
+  {id:'feet',key:'feet',label:'脚部',levels:['冰凉','偏凉','一般','温暖','舒适'],need:'温暖脚部'},
+  {id:'head',key:'head',label:'头部',levels:['痛','不适','一般','清醒','轻松'],need:'放松头部'},
+  {id:'hands',key:'hands',label:'手部',levels:['酸痛','僵硬','一般','放松','灵活'],need:'活动双手'}
 ];
 var STAGES = [
   {min:0,max:2,name:'初芽',desc:'一颗小小的种子，刚刚发芽。'},
@@ -482,6 +555,8 @@ var SEASONS = [
 var RECORD_KEY = 'chuya_v2_records';
 var SEASON_KEY = 'chuya_v2_season';
 var REVIEW_MODE_KEY = 'chuya_v2_review_mode';
+var EMOTION_CONFIG_KEY = 'chuya_v3_emotions';
+var BODY_CONFIG_KEY = 'chuya_v3_body_dims';
 
 function loadAll(){try{return JSON.parse(localStorage.getItem(RECORD_KEY)||'[]');}catch(e){return[];}}
 function saveAll(r){localStorage.setItem(RECORD_KEY,JSON.stringify(r));}
@@ -492,6 +567,23 @@ function getSeason(){return localStorage.getItem(SEASON_KEY)||'spring';}
 function setSeason(s){localStorage.setItem(SEASON_KEY,s);}
 function getReviewMode(){return localStorage.getItem(REVIEW_MODE_KEY)||'week';}
 function setReviewMode(m){localStorage.setItem(REVIEW_MODE_KEY,m);}
+function cloneDefs(defs){return JSON.parse(JSON.stringify(defs));}
+function loadConfig(key,defaults){
+  try{
+    var saved=JSON.parse(localStorage.getItem(key)||'null');
+    return Array.isArray(saved)?saved:cloneDefs(defaults);
+  }catch(e){return cloneDefs(defaults);}
+}
+function getEmotions(){return loadConfig(EMOTION_CONFIG_KEY,DEFAULT_EMOTIONS);}
+function saveEmotions(items){localStorage.setItem(EMOTION_CONFIG_KEY,JSON.stringify(items));}
+function getBodyDims(){return loadConfig(BODY_CONFIG_KEY,DEFAULT_BODY_DIMS);}
+function saveBodyDims(items){localStorage.setItem(BODY_CONFIG_KEY,JSON.stringify(items));}
+function getBodyDefinition(key){
+  return getBodyDims().concat(DEFAULT_BODY_DIMS).find(function(d){return d.key===key;});
+}
+function escapeHTML(value){
+  return String(value).replace(/[&<>'"]/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch];});
+}
 
 function getMonthRecords(y,m){
   return loadAll().filter(function(r){
@@ -511,12 +603,14 @@ function getWeekRecords(refDate){
 
 // ========== STATE ==========
 var selectedEmos = {};
-var bodyStates = {breathing:0,shoulders:0,chest:0,abdomen:0,fatigue:0};
+var bodyStates = {};
 var currentScreen = 'home';
 var reviewRefDate = new Date();
 var starFilter = 'all';
 var lastAddedId = null;
 var reviewMode = getReviewMode();
+var configMode = 'emotion';
+var editingConfigId = null;
 
 // ========== TREE SVG ==========
 function leafCluster(cx,cy,s,fill,op){
@@ -868,13 +962,96 @@ function applySeason(sid){
   showToast('已切换至 '+SEASONS.find(function(s){return s.id===sid;}).name+' 季');
 }
 
+// ========== EDITABLE CONFIG ==========
+function openConfig(mode){
+  configMode=mode;editingConfigId=null;
+  document.getElementById('configTitle').textContent=mode==='emotion'?'管理情绪':'管理身体部位';
+  var option=document.getElementById('configOption');
+  option.innerHTML=mode==='emotion'
+    ?'<option value="light">光星</option><option value="dark">暗星</option>'
+    :'<option value="冰凉">冰凉</option><option value="痛">痛</option><option value="酸痛">酸痛</option><option value="紧绷">紧绷</option><option value="疲惫">疲惫</option>';
+  document.getElementById('configName').placeholder=mode==='emotion'?'情绪名称':'身体部位';
+  document.getElementById('configHint').textContent=mode==='emotion'
+    ?'光星与暗星只影响新记录的星星类型。'
+    :'右侧选项是这个部位状态较低时的主要感受。';
+  resetConfigForm();renderConfigList();
+  document.getElementById('configModalBg').classList.add('show');
+  setTimeout(function(){document.getElementById('configName').focus();},220);
+}
+function closeConfig(){document.getElementById('configModalBg').classList.remove('show');}
+function resetConfigForm(){
+  editingConfigId=null;document.getElementById('configForm').reset();
+  document.getElementById('configSubmit').textContent='新增';
+}
+function renderConfigList(){
+  var list=document.getElementById('configList');list.innerHTML='';
+  var items=configMode==='emotion'?getEmotions():getBodyDims();
+  items.forEach(function(item){
+    var row=document.createElement('div');row.className='config-item';
+    var dot=document.createElement('span');dot.className='config-dot'+(configMode==='emotion'&&item.type==='dark'?' dark':'');
+    var info=document.createElement('div');info.className='config-info';
+    var name=document.createElement('div');name.className='config-name';name.textContent=configMode==='emotion'?item.name:item.label;
+    var meta=document.createElement('div');meta.className='config-meta';
+    meta.textContent=configMode==='emotion'?(item.type==='light'?'光星':'暗星'):('低状态：'+item.levels[0]);
+    info.appendChild(name);info.appendChild(meta);
+    var actions=document.createElement('div');actions.className='config-actions';
+    var edit=document.createElement('button');edit.className='mini-btn';edit.type='button';edit.textContent='编辑';edit.onclick=function(){editConfigItem(item.id);};
+    var del=document.createElement('button');del.className='mini-btn';del.type='button';del.textContent='删除';del.onclick=function(){deleteConfigItem(item.id);};
+    actions.appendChild(edit);actions.appendChild(del);
+    row.appendChild(dot);row.appendChild(info);row.appendChild(actions);list.appendChild(row);
+  });
+}
+function editConfigItem(id){
+  var items=configMode==='emotion'?getEmotions():getBodyDims();
+  var item=items.find(function(x){return x.id===id;});if(!item)return;
+  editingConfigId=id;
+  document.getElementById('configName').value=configMode==='emotion'?item.name:item.label;
+  document.getElementById('configOption').value=configMode==='emotion'?item.type:item.levels[0];
+  document.getElementById('configSubmit').textContent='保存';
+  document.getElementById('configName').focus();
+}
+function saveConfigItem(event){
+  event.preventDefault();
+  var name=document.getElementById('configName').value.trim();
+  var option=document.getElementById('configOption').value;if(!name)return;
+  var items=configMode==='emotion'?getEmotions():getBodyDims();
+  var duplicate=items.some(function(x){return (configMode==='emotion'?x.name:x.label)===name&&x.id!==editingConfigId;});
+  if(duplicate){showToast('这个名称已经存在');return;}
+  if(editingConfigId){
+    items=items.map(function(x){
+      if(x.id!==editingConfigId)return x;
+      if(configMode==='emotion')return Object.assign({},x,{name:name,type:option});
+      var levels=x.levels.slice();levels[0]=option;
+      return Object.assign({},x,{label:name,levels:levels,need:'照顾'+name});
+    });
+  }else if(configMode==='emotion'){
+    items.push({id:'emotion_'+Date.now(),name:name,type:option});
+  }else{
+    items.push({id:'body_'+Date.now(),key:'custom_'+Date.now(),label:name,levels:[option,'轻微','一般','放松','舒适'],need:'照顾'+name});
+  }
+  if(configMode==='emotion')saveEmotions(items);else saveBodyDims(items);
+  resetConfigForm();renderConfigList();
+  if(configMode==='emotion')renderAwareness();else renderBody();
+  showToast('已保存');
+}
+function deleteConfigItem(id){
+  var items=configMode==='emotion'?getEmotions():getBodyDims();
+  if(items.length<=1){showToast('至少保留一项');return;}
+  if(!confirm('仅从选择列表移除，已有记录不会被删除。继续吗？'))return;
+  items=items.filter(function(x){return x.id!==id;});
+  if(configMode==='emotion')saveEmotions(items);else saveBodyDims(items);
+  resetConfigForm();renderConfigList();
+  if(configMode==='emotion')renderAwareness();else renderBody();
+  showToast('已移除，历史记录仍保留');
+}
+
 // ========== AWARENESS ==========
 function renderAwareness(){
   selectedEmos={};
   document.getElementById('thoughtInput').value='';
   var grid=document.getElementById('emoGrid');
   grid.innerHTML='';
-  EMOTIONS.forEach(function(e){
+  getEmotions().forEach(function(e){
     var div=document.createElement('div');
     div.className='emo-chip';
     div.textContent=e.name;
@@ -901,6 +1078,7 @@ function saveAwareness(){
   var rec={
     id:Date.now(),timestamp:new Date().toISOString(),type:'emotion',
     emotions:emos,thought:document.getElementById('thoughtInput').value.trim(),
+    emotionTypes:Object.assign({},selectedEmos),
     starType:hasLight?'light':'dark',starX:pos.x,starY:pos.y,starSize:Math.round(Math.random()*2+3)
   };
   addRecord(rec);lastAddedId=rec.id;
@@ -911,9 +1089,10 @@ function saveAwareness(){
 
 // ========== BODY ==========
 function renderBody(){
-  bodyStates={breathing:0,shoulders:0,chest:0,abdomen:0,fatigue:0};
+  bodyStates={};
   var container=document.getElementById('bodyDims');container.innerHTML='';
-  BODY_DIMS.forEach(function(dim){
+  getBodyDims().forEach(function(dim){
+    bodyStates[dim.key]=0;
     var wrap=document.createElement('div');wrap.className='body-dim';
     var head=document.createElement('div');head.className='body-dim-head';
     head.innerHTML='<span class="body-dim-label">'+dim.label+'</span><span class="body-dim-val" id="bv-'+dim.key+'">-</span>';
@@ -941,11 +1120,7 @@ function updateBodySug(){
   var allSet=Object.keys(bodyStates).every(function(k){return bodyStates[k]>0;});
   if(!allSet){el.textContent='感受一下，身体此刻在告诉你什么？';el.style.color='var(--coral)';return;}
   var needs=[];
-  if(bodyStates.breathing<=2)needs.push('深呼吸');
-  if(bodyStates.shoulders<=2)needs.push('活动肩颈');
-  if(bodyStates.chest<=2)needs.push('扩胸');
-  if(bodyStates.abdomen<=2)needs.push('喝杯温水');
-  if(bodyStates.fatigue<=2)needs.push('休息一下');
+  getBodyDims().forEach(function(dim){if(bodyStates[dim.key]>0&&bodyStates[dim.key]<=2)needs.push(dim.need||('照顾'+dim.label));});
   if(needs.length===0){el.textContent='身体说：什么都不用做，享受此刻就好';el.style.color='var(--green-light)';}
   else{el.textContent='身体需要：'+needs.join(' · ');el.style.color='var(--coral)';}
 }
@@ -962,11 +1137,12 @@ function saveBody(){
   var rec={
     id:Date.now(),timestamp:new Date().toISOString(),type:'body',
     bodyStates:Object.assign({},bodyStates),
+    bodySnapshot:getBodyDims().map(function(d){return {key:d.key,label:d.label,levels:d.levels.slice()};}),
     bodyNeed:document.getElementById('bodySug').textContent,
     starType:avg>=3?'light':'dark',starX:pos.x,starY:pos.y,starSize:Math.round(Math.random()*2+3)
   };
   addRecord(rec);lastAddedId=rec.id;
-  bodyStates={breathing:0,shoulders:0,chest:0,abdomen:0,fatigue:0};
+  bodyStates={};
   showToast('已记录 · 成为星空里的一颗星');
   setTimeout(function(){go('stars');},400);
 }
@@ -1078,18 +1254,22 @@ function showDetail(id){
   if(rec.type==='emotion'){
     html+='<div class="modal-section"><div class="modal-section-label">情绪</div><div class="modal-emos">';
     rec.emotions.forEach(function(e){
-      var emo=EMOTIONS.find(function(em){return em.name===e;}),t=emo?emo.type:'light';
-      html+='<span class="modal-emo '+t+'">'+e+'</span>';
+      var emo=getEmotions().concat(DEFAULT_EMOTIONS).find(function(em){return em.name===e;});
+      var t=(rec.emotionTypes&&rec.emotionTypes[e])||(emo&&emo.type)||rec.starType||'light';
+      html+='<span class="modal-emo '+t+'">'+escapeHTML(e)+'</span>';
     });
     html+='</div></div>';
-    if(rec.thought)html+='<div class="modal-section"><div class="modal-section-label">念头</div><div class="modal-thought">"'+rec.thought+'"</div></div>';
+    if(rec.thought)html+='<div class="modal-section"><div class="modal-section-label">念头</div><div class="modal-thought">"'+escapeHTML(rec.thought)+'"</div></div>';
   }else{
     html+='<div class="modal-section"><div class="modal-section-label">身体状态</div><div class="modal-body-states">';
-    BODY_DIMS.forEach(function(dim){
-      if(rec.bodyStates[dim.key]>0)html+='<div class="modal-bs-row"><span class="k">'+dim.label+'</span><span class="v">'+dim.levels[rec.bodyStates[dim.key]-1]+'</span></div>';
+    Object.keys(rec.bodyStates||{}).forEach(function(key){
+      var dim=(rec.bodySnapshot||[]).find(function(d){return d.key===key;})||getBodyDefinition(key);
+      var level=rec.bodyStates[key];if(level<=0)return;
+      var label=dim?dim.label:key,value=dim&&dim.levels[level-1]?dim.levels[level-1]:('等级 '+level);
+      html+='<div class="modal-bs-row"><span class="k">'+escapeHTML(label)+'</span><span class="v">'+escapeHTML(value)+'</span></div>';
     });
     html+='</div></div>';
-    if(rec.bodyNeed)html+='<div class="modal-section"><div class="modal-section-label">身体需要</div><div class="modal-sug">'+rec.bodyNeed+'</div></div>';
+    if(rec.bodyNeed)html+='<div class="modal-section"><div class="modal-section-label">身体需要</div><div class="modal-sug">'+escapeHTML(rec.bodyNeed)+'</div></div>';
   }
   html+='<div class="modal-actions"><button class="modal-del" onclick="deleteAndClose('+id+')">删除</button><button class="modal-close" onclick="closeModal()">关闭</button></div>';
   document.getElementById('modalCard').innerHTML=html;

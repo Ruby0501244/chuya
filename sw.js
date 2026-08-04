@@ -1,4 +1,4 @@
-var C='chuya-v5';
+var C='chuya-v6';
 var ASSETS=['/','/index.html','/manifest.webmanifest','/icon.svg'];
 self.addEventListener('install',function(e){
   e.waitUntil(caches.open(C).then(function(c){return c.addAll(ASSETS);}).then(function(){return self.skipWaiting();}));
