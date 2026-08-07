@@ -1,5 +1,5 @@
-var C='chuya-v6';
-var ASSETS=['/','/index.html','/manifest.webmanifest','/icon.svg'];
+var C='chuya-v16';
+var ASSETS=['./','./index.html','./manifest.webmanifest','./icon.svg','./assets/trees/chuya-tree-winter.png?v=3','./assets/trees/chuya-tree-spring.png?v=3','./assets/trees/chuya-tree-summer.png?v=3','./assets/trees/chuya-tree-autumn.png?v=3','./assets/trees/icons/chuya-tree-winter-icon.png?v=3','./assets/trees/icons/chuya-tree-spring-icon.png?v=3','./assets/trees/icons/chuya-tree-summer-icon.png?v=3','./assets/trees/icons/chuya-tree-autumn-icon.png?v=3'];
 self.addEventListener('install',function(e){
   e.waitUntil(caches.open(C).then(function(c){return c.addAll(ASSETS);}).then(function(){return self.skipWaiting();}));
 });

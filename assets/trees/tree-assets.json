@@ -1,0 +1,24 @@
+{
+  "skeletonId": "chuya-main-tree-v3-first-thumbnail",
+  "starNodeCount": 8,
+  "fullSize": { "width": 1254, "height": 1254 },
+  "iconSize": { "width": 256, "height": 256 },
+  "assets": {
+    "winter": {
+      "full": "assets/trees/chuya-tree-winter.png",
+      "icon": "assets/trees/icons/chuya-tree-winter-icon.png"
+    },
+    "spring": {
+      "full": "assets/trees/chuya-tree-spring.png",
+      "icon": "assets/trees/icons/chuya-tree-spring-icon.png"
+    },
+    "summer": {
+      "full": "assets/trees/chuya-tree-summer.png",
+      "icon": "assets/trees/icons/chuya-tree-summer-icon.png"
+    },
+    "autumn": {
+      "full": "assets/trees/chuya-tree-autumn.png",
+      "icon": "assets/trees/icons/chuya-tree-autumn-icon.png"
+    }
+  }
+}

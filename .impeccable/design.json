@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-07T09:29:14.5879494+08:00",
+  "title": "Design System: 初芽",
+  "extensions": {
+    "colorMeta": {
+      "mist-paper": {
+        "role": "neutral",
+        "displayName": "雾白纸面",
+        "canonical": "#F3F7F8",
+        "tonalRamp": ["#192124", "#354347", "#52666B", "#718A90", "#93AFB5", "#B6D1D6", "#D7E7EA", "#F3F7F8"]
+      },
+      "mist-paper-high": {
+        "role": "neutral",
+        "displayName": "高光纸白",
+        "canonical": "#F9FBFB",
+        "tonalRamp": ["#1B2021", "#394143", "#586366", "#79878A", "#9DADB0", "#C2D0D2", "#E2E9EA", "#F9FBFB"]
+      },
+      "ice-wash": {
+        "role": "primary",
+        "displayName": "冰雾洗色",
+        "canonical": "#EEF4F6",
+        "tonalRamp": ["#172125", "#30454C", "#4A6A73", "#67919B", "#89B8C1", "#B0D5DC", "#D4E8EC", "#EEF4F6"]
+      },
+      "ice-depth": {
+        "role": "neutral",
+        "displayName": "冰蓝深纸",
+        "canonical": "#DDE8ED",
+        "tonalRamp": ["#182127", "#32444D", "#4D6875", "#6C8E9D", "#91B5C2", "#B4CFD9", "#CFDFE5", "#DDE8ED"]
+      },
+      "card-glass": {
+        "role": "neutral",
+        "displayName": "半透明白卡",
+        "canonical": "rgba(255,255,255,.34)",
+        "tonalRamp": ["rgba(255,255,255,.08)", "rgba(255,255,255,.12)", "rgba(255,255,255,.18)", "rgba(255,255,255,.24)", "rgba(255,255,255,.34)", "rgba(255,255,255,.46)", "rgba(255,255,255,.64)", "rgba(255,255,255,.86)"]
+      },
+      "card-glass-hover": {
+        "role": "neutral",
+        "displayName": "半透明白卡悬停",
+        "canonical": "rgba(255,255,255,.52)",
+        "tonalRamp": ["rgba(255,255,255,.10)", "rgba(255,255,255,.16)", "rgba(255,255,255,.24)", "rgba(255,255,255,.34)", "rgba(255,255,255,.46)", "rgba(255,255,255,.58)", "rgba(255,255,255,.72)", "rgba(255,255,255,.90)"]
+      },
+      "line-cool": {
+        "role": "neutral",
+        "displayName": "冷灰细线",
+        "canonical": "rgba(65,88,105,.12)",
+        "tonalRamp": ["rgba(65,88,105,.06)", "rgba(65,88,105,.09)", "rgba(65,88,105,.12)", "rgba(65,88,105,.18)", "rgba(65,88,105,.26)", "rgba(65,88,105,.38)", "rgba(65,88,105,.54)", "rgba(65,88,105,.72)"]
+      },
+      "line-active": {
+        "role": "primary",
+        "displayName": "活动雾蓝线",
+        "canonical": "rgba(119,145,159,.42)",
+        "tonalRamp": ["rgba(119,145,159,.08)", "rgba(119,145,159,.14)", "rgba(119,145,159,.22)", "rgba(119,145,159,.32)", "rgba(119,145,159,.42)", "rgba(119,145,159,.54)", "rgba(119,145,159,.68)", "rgba(119,145,159,.84)"]
+      },
+      "ink-primary": {
+        "role": "neutral",
+        "displayName": "灰蓝主墨",
+        "canonical": "#283B49",
+        "tonalRamp": ["#10191E", "#1B2932", "#283B49", "#3D5668", "#5D7484", "#8295A2", "#B2C0C8", "#E4EAED"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "灰蓝次墨",
+        "canonical": "#566B79",
+        "tonalRamp": ["#172026", "#2B3942", "#40535F", "#566B79", "#718794", "#91A4AF", "#B9C6CD", "#E6EBEE"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "静默灰蓝",
+        "canonical": "#7C8D98",
+        "tonalRamp": ["#1D2428", "#374249", "#56636C", "#7C8D98", "#97A6AF", "#B2BEC5", "#D0D8DC", "#EDF1F3"]
+      },
+      "warm-light": {
+        "role": "secondary",
+        "displayName": "克制暖光",
+        "canonical": "#9C875D",
+        "tonalRamp": ["#281F11", "#493B20", "#6B5832", "#8D764B", "#AA9366", "#C5B38D", "#DED2B7", "#F3EDDF"]
+      },
+      "petal-muted": {
+        "role": "tertiary",
+        "displayName": "花瓣灰粉",
+        "canonical": "#B58F98",
+        "tonalRamp": ["#2B1C21", "#4F333B", "#744E58", "#996D78", "#B58F98", "#CBAEB5", "#E0CDD2", "#F4EAEC"]
+      },
+      "violet-muted": {
+        "role": "tertiary",
+        "displayName": "暮紫",
+        "canonical": "#9188AA",
+        "tonalRamp": ["#211D2B", "#3D364D", "#5A5271", "#766E92", "#9188AA", "#AEA7C1", "#CDC8DB", "#EEEBF3"]
+      },
+      "leaf-muted": {
+        "role": "tertiary",
+        "displayName": "叶影绿",
+        "canonical": "#829B86",
+        "tonalRamp": ["#19251B", "#304433", "#49654D", "#648169", "#829B86", "#A2B6A5", "#C4D1C6", "#E9EFEA"]
+      },
+      "ice-accent": {
+        "role": "primary",
+        "displayName": "雾蓝强调",
+        "canonical": "#7894A7",
+        "tonalRamp": ["#17242C", "#2D4350", "#456477", "#5F8295", "#7894A7", "#9AAEBA", "#BECBD2", "#E7EDF0"]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "深蓝夜幕",
+        "canonical": "#11182B",
+        "tonalRamp": ["#090D18", "#11182B", "#1C2946", "#2A3C63", "#41577E", "#697CA0", "#A0ADC4", "#E1E6EF"]
+      },
+      "night-soft": {
+        "role": "neutral",
+        "displayName": "柔夜蓝",
+        "canonical": "#171F35",
+        "tonalRamp": ["#0B0F1A", "#171F35", "#253250", "#35466C", "#4D6289", "#7183A5", "#A8B4C9", "#E4E8F0"]
+      },
+      "night-deep": {
+        "role": "neutral",
+        "displayName": "夜色深处",
+        "canonical": "#0D1324",
+        "tonalRamp": ["#070A13", "#0D1324", "#19223B", "#263454", "#3B4B72", "#62749A", "#9CA9C1", "#E0E5EE"]
+      },
+      "night-text": {
+        "role": "neutral",
+        "displayName": "夜幕主文字",
+        "canonical": "#F2F3F1",
+        "tonalRamp": ["#20211F", "#41423F", "#646560", "#898A84", "#AFB0AA", "#D0D1CC", "#E6E7E3", "#F2F3F1"]
+      },
+      "night-text-secondary": {
+        "role": "neutral",
+        "displayName": "夜幕次文字",
+        "canonical": "#C6CDD5",
+        "tonalRamp": ["#1A2027", "#343E48", "#505E6A", "#6F808E", "#91A1AE", "#AFBCC6", "#C6CDD5", "#ECF0F3"]
+      },
+      "night-text-muted": {
+        "role": "neutral",
+        "displayName": "夜幕静默文字",
+        "canonical": "#8F99A8",
+        "tonalRamp": ["#1D222B", "#38404E", "#555F70", "#707C8E", "#8F99A8", "#ABB3BE", "#CBD0D7", "#EEF0F3"]
+      },
+      "night-warm-light": {
+        "role": "secondary",
+        "displayName": "夜幕暖星",
+        "canonical": "#D7BE82",
+        "tonalRamp": ["#2A210F", "#4D3C1C", "#72592C", "#98783F", "#BC9958", "#D7BE82", "#E8D8AE", "#F6EFDE"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "主展示标题", "purpose": "陪伴流程卡片和关键页面标题。" },
+      "headline": { "displayName": "页面标题", "purpose": "星空、声音等一级页面标题。" },
+      "title": { "displayName": "核心提问", "purpose": "首页核心提问与高优先级短句。" },
+      "body": { "displayName": "舒缓正文", "purpose": "说明、引导和较长陪伴文本。" },
+      "label": { "displayName": "辅助标签", "purpose": "按钮辅助文案、筛选、提示和元数据。" }
+    },
+    "shadows": [
+      { "name": "tree-ambient", "value": "drop-shadow(0 18px 25px rgba(89,110,124,.12))", "purpose": "透明水彩主树在雾白纸面上的轻微环境投影。" },
+      { "name": "modal-float", "value": "0 24px 64px rgba(61,82,95,.15)", "purpose": "模态框和底部配置面板。" },
+      { "name": "drawer-side", "value": "20px 0 48px rgba(52,72,85,.12)", "purpose": "左侧导航抽屉的方向性层级。" },
+      { "name": "toast-low", "value": "0 14px 36px rgba(63,88,105,.12)", "purpose": "短暂提示反馈。" },
+      { "name": "focus-ring", "value": "0 0 0 3px rgba(120,148,167,.18)", "purpose": "输入和选择控件的键盘焦点。" }
+    ],
+    "motion": [
+      { "name": "surface-in", "value": ".26s cubic-bezier(.2,.7,.2,1)", "purpose": "页面以 6px 上移淡入。" },
+      { "name": "drawer-in", "value": ".28s ease", "purpose": "抽屉从左侧进入。" },
+      { "name": "surface-swap", "value": ".42s ease", "purpose": "雾白与深蓝空间之间的背景切换。" },
+      { "name": "tree-arrive", "value": ".52s cubic-bezier(.2,.7,.2,1)", "purpose": "主树一次性去模糊入场。" },
+      { "name": "quiet-twinkle", "value": "4s–8s ease-in-out infinite", "purpose": "星空背景星点的低幅度闪烁。" },
+      { "name": "reduced-motion", "value": ".01ms, 1 iteration", "purpose": "用户要求减少动效时，将所有动画和过渡降至近乎即时。" }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "350px" },
+      { "name": "short", "value": "700px height" },
+      { "name": "canvas-max", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "用于保存、继续与确认的安静主操作。",
+      "html": "<button class=\"ds-btn-primary\">保存</button>",
+      "css": ".ds-btn-primary { min-height:52px; padding:10px 16px; border-radius:18px; background:rgba(231,237,237,.72); border:1px solid rgba(120,148,167,.36); color:#405B6C; font:500 15px/1.4 'PingFang SC','Microsoft YaHei',system-ui,sans-serif; letter-spacing:.02em; cursor:pointer; transition:background .2s, border-color .2s, transform .18s; } .ds-btn-primary:hover { background:rgba(231,237,237,.9); border-color:rgba(120,148,167,.52); } .ds-btn-primary:active { transform:scale(.985); } .ds-btn-primary:focus-visible { outline:2px solid rgba(120,148,167,.42); outline-offset:2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "用于返回、稍后与次要动作的轻透明按钮。",
+      "html": "<button class=\"ds-btn-secondary\">稍后再说</button>",
+      "css": ".ds-btn-secondary { min-height:52px; padding:10px 16px; border-radius:18px; background:rgba(255,255,255,.24); border:1px solid rgba(65,88,105,.12); color:#566B79; font:400 14px/1.4 'PingFang SC','Microsoft YaHei',system-ui,sans-serif; cursor:pointer; transition:background .2s, border-color .2s, transform .18s; } .ds-btn-secondary:hover { background:rgba(255,255,255,.4); border-color:rgba(119,145,159,.32); } .ds-btn-secondary:active { transform:scale(.985); } .ds-btn-secondary:focus-visible { outline:2px solid rgba(120,148,167,.42); outline-offset:2px; }"
+    },
+    {
+      "name": "Reflection Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "用于情绪记录和陪伴流程的长文本输入。",
+      "html": "<textarea class=\"ds-field\" placeholder=\"此刻，我想对自己说……\"></textarea>",
+      "css": ".ds-field { width:100%; min-height:132px; padding:16px; border-radius:14px; background:rgba(255,255,255,.32); border:1px solid rgba(65,88,105,.12); color:#283B49; font:400 16px/1.8 'PingFang SC','Microsoft YaHei',system-ui,sans-serif; resize:vertical; outline:none; transition:border-color .2s, box-shadow .2s; } .ds-field::placeholder { color:#87959E; } .ds-field:hover { border-color:rgba(119,145,159,.3); } .ds-field:focus-visible { border-color:rgba(120,148,167,.52); box-shadow:0 0 0 3px rgba(120,148,167,.18); }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "普通页面的记录、声音与回看内容容器。",
+      "html": "<article class=\"ds-card\"><h3>此刻的感受</h3><p>先不急着改变，只需要温柔地看见。</p></article>",
+      "css": ".ds-card { padding:20px; border-radius:18px; background:rgba(255,255,255,.34); border:1px solid rgba(65,88,105,.12); color:#283B49; backdrop-filter:blur(14px); font-family:'PingFang SC','Microsoft YaHei',system-ui,sans-serif; transition:background .2s, border-color .2s; } .ds-card:hover { background:rgba(255,255,255,.52); border-color:rgba(119,145,159,.24); } .ds-card h3 { margin:0 0 8px; font-size:17px; font-weight:500; letter-spacing:.02em; } .ds-card p { margin:0; color:#566B79; font-size:14px; line-height:1.8; } .ds-card:focus-within { border-color:rgba(120,148,167,.42); }"
+    },
+    {
+      "name": "Navigation Item",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "左侧抽屉中的一级导航项。",
+      "html": "<button class=\"ds-nav-item\"><span>回看</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-nav-item { width:100%; min-height:50px; padding:12px 16px; border:0; border-radius:14px; background:transparent; color:#566B79; display:flex; align-items:center; justify-content:space-between; font:400 15px/1.4 'PingFang SC','Microsoft YaHei',system-ui,sans-serif; letter-spacing:.02em; cursor:pointer; transition:background .2s, color .2s; } .ds-nav-item svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; } .ds-nav-item:hover { color:#283B49; background:rgba(120,148,167,.1); } .ds-nav-item:active { background:rgba(120,148,167,.16); } .ds-nav-item:focus-visible { outline:2px solid rgba(120,148,167,.42); outline-offset:2px; }"
+    },
+    {
+      "name": "Prompt Chip",
+      "kind": "chip",
+      "description": "陪伴流程中可选择的温柔提示语。",
+      "html": "<button class=\"ds-prompt-chip\">我在这里。</button>",
+      "css": ".ds-prompt-chip { padding:9px 13px; border-radius:999px; background:rgba(255,255,255,.24); border:1px solid rgba(65,88,105,.12); color:#566B79; font:400 13px/1.45 'PingFang SC','Microsoft YaHei',system-ui,sans-serif; cursor:pointer; transition:background .2s, border-color .2s, color .2s, transform .18s; } .ds-prompt-chip:hover { background:rgba(255,255,255,.42); border-color:rgba(119,145,159,.3); } .ds-prompt-chip:active { transform:scale(.985); } .ds-prompt-chip:focus-visible { outline:2px solid rgba(120,148,167,.42); outline-offset:2px; }"
+    },
+    {
+      "name": "Menu Control",
+      "kind": "button",
+      "description": "固定在顶部安全区内的圆形玻璃导航控件。",
+      "html": "<button class=\"ds-menu-control\" aria-label=\"打开导航\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 7h14M5 12h14M5 17h14\"/></svg></button>",
+      "css": ".ds-menu-control { width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,.28); border:1px solid rgba(74,98,114,.12); color:#566B79; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(14px); cursor:pointer; transition:background .2s, border-color .2s, transform .18s; } .ds-menu-control svg { width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; } .ds-menu-control:hover { background:rgba(255,255,255,.46); border-color:rgba(119,145,159,.28); } .ds-menu-control:active { transform:scale(.97); } .ds-menu-control:focus-visible { outline:2px solid rgba(120,148,167,.42); outline-offset:2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "雾白内在庭院",
+    "overview": "初芽的视觉世界像一页被晨雾浸润的水彩纸：安静、柔软、留有呼吸，不把自我觉察包装成进度竞赛。普通页面保持雾白与冰蓝的低对比纸面，四季颜色只作为轻微环境晕染；只有进入“我的星空”时，空间才切换为独立的深蓝夜色。\n\n完整的四季主树是稳定自我的视觉锚点。它随季节改变叶量、花朵与色彩，却不随记录数量生长或退化；树上的八颗暖白光属于树本身，表达持续存在的内在生命感。用户记录生成的数据星只进入专用星空层，绝不附着到首页主树上。",
+    "keyCharacteristics": [
+      "雾白、冰蓝、低饱和水彩纸面。",
+      "普通页面为浅色空间，星空页为独立深蓝空间。",
+      "四季完整主树、固定骨架、固定八颗内在光点。",
+      "克制的玻璃感、细线分隔与柔和环境阴影。",
+      "手机优先的单列布局，首页主树随视口高度响应。",
+      "轻、慢、可被减少动效设置完整关闭的过渡。"
+    ],
+    "rules": [
+      { "name": "The Two Spaces Rule", "body": "普通页面永远属于雾白纸面；只有星空层可以切换为深蓝夜色。", "section": "colors" },
+      { "name": "The Warm Light Rarity Rule", "body": "暖光只标记内在生命与重要反馈，不铺满按钮、卡片或大面积背景。", "section": "colors" },
+      { "name": "The Low-Saturation Rule", "body": "四季色是薄薄的水彩晕染，不使用高饱和、霓虹或强烈互补色。", "section": "colors" },
+      { "name": "The Quiet Hierarchy Rule", "body": "不用极粗字重或极端字号制造层级；标题的上限是中等字重，正文依靠留白获得关注。", "section": "typography" },
+      { "name": "The Complete Tree Rule", "body": "首页、星空树和回看树始终渲染当季完整 PNG；记录数量不得改变树的阶段、尺寸或枝叶完整度。", "section": "layout" },
+      { "name": "The Flat-by-Default Rule", "body": "卡片和控件静止时依靠半透明表面与细边界分层，不为每个容器添加阴影。", "section": "elevation" },
+      { "name": "The Soft Containers, Clear Structure Rule", "body": "圆角负责触感，细线负责结构；不得用厚重边框同时承担两者。", "section": "shapes" }
+    ],
+    "dos": [
+      "**Do** 让所有普通页面保持雾白、冰蓝和浅色文字层级，只在专用星空层进入深蓝。",
+      "**Do** 在首页上半部完整展示响应式当季主树，并保持四季之间同一树干骨架与八个固定光点。",
+      "**Do** 把数据星限制在星空层；它们不得改变主树资产、树上八颗光或首页构图。",
+      "**Do** 使用 4px 间距基准、20px 常规页边距、16–24px 卡片内边距和安全区适配。",
+      "**Do** 为键盘用户保留可见焦点状态，并完整支持减少动效偏好。"
+    ],
+    "donts": [
+      "**Don't** 根据记录数量让树从幼苗成长、掉叶、缩小或变得不完整。",
+      "**Don't** 把树上的八颗暖白光解释成记录、勋章、进度或可点击数据点。",
+      "**Don't** 在首页或普通记录页铺设深蓝夜空、数据星群或持续闪烁的装饰。",
+      "**Don't** 使用霓虹、高饱和色、写实树皮、机械对称枝条、厚重阴影或高对比纯黑文字。",
+      "**Don't** 把首页四个入口改成四张浮起的卡片；保留透明底与细线分组。"
+    ]
+  }
+}
