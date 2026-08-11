@@ -225,7 +225,7 @@ body.drawer-open{overflow:hidden;touch-action:none;}
 .form-hint{font-size:11px;color:var(--t3);margin-top:9px;line-height:1.6;}
 
 /* ===== STARS ===== */
-.star-screen{display:none;flex:1;overflow-y:auto;position:relative;z-index:1;-webkit-overflow-scrolling:touch;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
+.star-screen{display:none;flex:1;overflow-y:auto;position:relative;z-index:1;-webkit-overflow-scrolling:touch;padding-bottom:env(safe-area-inset-bottom);}
 .star-screen.active{display:flex;flex-direction:column;}
 .star-screen::-webkit-scrollbar{width:0;}
 .stars-top{display:flex;justify-content:space-between;align-items:center;padding:calc(78px + env(safe-area-inset-top)) 20px 12px;}
