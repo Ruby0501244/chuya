@@ -1181,8 +1181,9 @@ function treeThumbMarkup(season){
 }
 
 function setSurface(screen){
-  var night=screen==='stars',app=document.getElementById('app');
+  var night=screen==='stars',app=document.getElementById('app'),rootBg=night?'#0D1324':'#DDE8ED';
   app.setAttribute('data-surface',night?'night':'light');
+  document.documentElement.style.backgroundColor=rootBg;document.body.style.backgroundColor=rootBg;
   document.querySelector('meta[name="theme-color"]').setAttribute('content',night?'#11182B':'#EEF4F6');
 }
 
